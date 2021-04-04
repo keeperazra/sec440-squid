@@ -31,7 +31,7 @@ for line in Lines:
     if count > 0 and count < 100:
         Domainlist.append(line)
 
-print (Domainlist)
+#print (Domainlist)
 file = open('BadDomains.txt', 'w')
 for items in Domainlist:
     file.writelines([items])
