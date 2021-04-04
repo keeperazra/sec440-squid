@@ -1,4 +1,6 @@
 #Objective: Pull list of bad doamins from git get first 100 of each and put in text file
+#Script can be expanded with an infinite amount of additional lists and each can be parsed via custom bits of code
+#Below is an exapmple using the first 100 lines from two different lists of bad domains
 import os
 def wget (url):
     location = os.getcwd()
@@ -30,3 +32,7 @@ for line in Lines:
         Domainlist.append(line)
 
 print (Domainlist)
+file = open('BadDomains.txt', 'w')
+for items in Domainlist:
+    file.writelines([items])
+file.close()
