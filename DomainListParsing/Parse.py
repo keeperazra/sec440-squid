@@ -17,7 +17,7 @@ count = 0
 for line in Lines:
     count += 1
     if count > 39 and count < 139: #The blacklisted domains start at line 39 hence why we are ignoring lines until this point
-        baddomain = line.replace('0.0.0.0','') #Remove the unneeded data from the string
+        baddomain = line.replace('0.0.0.0 ','') #Remove the unneeded data from the string
         Domainlist.append(baddomain)
 #Finished StevenBlack next is adding 100 URLs from the other file
 
